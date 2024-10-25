@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank World | Secure Online Banking</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> <!-- External CSS for additional customization -->
+    <style>
+        /* Custom CSS */
+
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+        }
+
+        /* Navbar */
+        .navbar {
+            padding: 1rem 1.5rem;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            color: #007bff !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            margin-right: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff !important;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/hero-bg.jpg") center/cover no-repeat;
+            color: white;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.25rem;
+        }
+
+        .btn-primary {
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Carousel */
+        .small-carousel {
+            max-height: 300px;
+            overflow: hidden;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 300px;
+            width: 100%;
+        }
+
+        /* Featured Section */
+        .featured-section {
+            padding: 3rem 0;
+        }
+
+        .featured-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-outline-primary {
+            border-radius: 50px;
+            padding: 0.5rem 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 2rem 0;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Scroll Animation */
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+            transition-duration: 1s;
+        }
+
+        [data-aos="fade-up"] {
+            transform: translateY(20px);
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bank World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="customerlogin.html">Customer Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="text-center">
+        <div class="container">
+            <h1>Welcome to Bank World</h1>
+            <p>Your Trusted Partner for All Online Banking Needs</p>
+            <a href="products.html" class="btn btn-primary btn-lg mt-3">Explore Our Products</a>
+        </div>
+    </header>
+
+    <!-- Carousel -->
+    <section class="container my-5">
+        <div id="carouselExampleIndicators" class="carousel slide small-carousel" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/business1.jpg" class="d-block w-100" alt="First Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Secure Banking Solutions</h5>
+                        <p>We provide industry-leading security for all your financial needs.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/business2.jpg" class="d-block w-100" alt="Second Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Tailored Financial Products</h5>
+                        <p>Explore a range of banking products designed to suit your lifestyle.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/business3.jpg" class="d-block w-100" alt="Third Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Trusted Partnerships</h5>
+                        <p>Join millions of satisfied customers who trust Bank World.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Featured Sections -->
+    <section class="container featured-section my-5">
+        <div class="row text-center" data-aos="fade-up">
+            <div class="col-lg-6 mb-4">
+                <div class="bg-light p-4 rounded shadow-sm">
+                    <h3 class="text-primary">Trust Us With Your Money</h3>
+                    <p>At Bank World, we understand the value of trust. Our secure and innovative banking solutions are designed to help you manage your finances with confidence.</p>
+                    <a href="products.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="bg-light p-4 rounded shadow-sm">
+                    <h3 class="text-primary">Commitment to Security</h3>
+                    <p>We prioritize the safety of your assets and personal information, offering cutting-edge security measures to protect your financial transactions.</p>
+                    <a href="aboutus.html" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <a href="#top" class="text-decoration-none text-light">Back to Top</a>
+            <p class="mt-3 mb-0">&copy; 2024 Bank World. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
