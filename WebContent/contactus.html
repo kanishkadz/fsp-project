@@ -10,9 +10,87 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FBFBFB;
+        }
+
+        .navbar {
+            padding: 1rem 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Custom shadow */
+        }
+
+        .navbar-nav {
+            text-align: center; /* Center align navbar items */
+            width: 100%; /* Ensure full width for proper centering */
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            color: #131B23 !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            margin-right: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #3772FF !important;
+        }
+
+        .tagline-upper,
+        .tagline-lower {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #131B23;
+        }
+
+        .about-section {
+            padding: 3rem 0;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 300px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .text-muted {
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
         .map-container iframe {
             width: 100%;
             height: 350px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 2rem 0;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Hover effect for team member cards */
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
         }
     </style>
 </head>
@@ -26,10 +104,6 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-faded py-lg-4">
             <div class="container">
-                <a class="navbar-brand text-uppercase text-expanded font-weight-bold" href="bankhomepage.html">Reserve Bank of Asansol</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item px-lg-4">
@@ -58,28 +132,30 @@
 
     <main class="container">
         <div class="bg-faded p-4 my-4">
-            <h2 class="text-center text-lg text-uppercase my-0">Contact <strong>Reserve Bank of Asansol</strong></h2>
+            <h2 class="text-center text-uppercase">Contact <strong>Reserve Bank of Asansol</strong></h2>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="embed-responsive embed-responsive-16by9 map-container mb-4 mb-lg-0">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.885305361469!2d86.94790947533487!3d23.715789528694163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f71f28112dc85f%3A0xc2814fdb4c367784!2sAsansol%20Engineering%20College%20(AEC)!5e0!3m2!1sen!2sin!4v1729871183539!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <h5 class="mb-0">Phone:</h5>
-                    <div class="mb-4">+91 - 974xxxxxxx</div>
-                    <h5 class="mb-0">Email:</h5>
-                    <div class="mb-4">
-                        <a href="mailto:reservebank.com">resevebank.com</a>
-                    </div>
-                    <h5 class="mb-0">Address:</h5>
-                    <div class="mb-4">
-                        Asansol Engineering College<br>
-                        Asansol, WB 713305
+                <div class="col-lg-4 d-flex align-items-center"> <!-- Added d-flex and align-items-center -->
+                    <div>
+                        <h5 class="mb-0">Phone:</h5>
+                        <div class="mb-4">+91 - 974xxxxxxx</div>
+                        <h5 class="mb-0">Email:</h5>
+                        <div class="mb-4">
+                            <a href="mailto:reservebank.com">reservebank.com</a> <!-- Fixed typo in email -->
+                        </div>
+                        <h5 class="mb-0">Address:</h5>
+                        <div class="mb-4">
+                            Asansol Engineering College<br>
+                            Asansol, WB 713305
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>    
 
         <div class="bg-faded p-4 my-4">
             <h2 class="text-center text-lg text-uppercase my-0">Contact <strong>Form</strong></h2>
