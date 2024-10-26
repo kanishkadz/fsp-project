@@ -31,7 +31,7 @@ public class Enquiry extends HttpServlet {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/bank_system","root","Arun@2001");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/bank_system","root","kanishka");
 			
 			 HttpSession session=req.getSession();  
 		    int sk1=(int)session.getAttribute("session_key");

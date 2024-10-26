@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,17 +52,11 @@
             background-color: transparent;
             color: #fff;
         }
+
         input:focus {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
             border: 1px solid #64B5F6;
-            border-radius: 5px;
-            background-color: transparent;
-            color: #fff;
         }
-        
+
         input[type="submit"] {
             background-color: #fff;
             font-size: 14px;
@@ -81,17 +74,16 @@
             background: transparent;
             border: 2px solid #fff;
             color: #fff;
-            text-transform: uppercase;
         }
 
-         div.link {
+        div.link {
             display: flex;
-            flex-direction:column;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin-top: 20px;
         }
-        
-        
+
         a {
             background-color: #fff;
             text-align: center;
@@ -105,42 +97,29 @@
             padding: 10px;
             transition: background-color 0.3s;
             text-decoration: none;
+            margin-bottom: 10px;
         }
 
         a:hover {
             background: transparent;
             border: 2px solid #fff;
             color: #fff;
-            text-transform: uppercase;
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     </style>
 </head>
 <body>
     <h2>Enter Amount</h2>
 
     <form action="withdraw" method="post">
-        <label for="eno">Amount to be Withdraw:</label>
-        <input type="number" name="withdraw1"><br>
-
-        
+        <label for="withdrawAmount">Amount to be Withdrawn:</label>
+        <input type="number" id="withdrawAmount" name="withdraw1" placeholder="Enter amount" required><br>
 
         <input type="submit" value="Proceed">
     </form>
 
-    <br>
-    <div>
-    <a href="mainoption.jsp">Back to Options</a>
-    <a href="logout">logout</a>
+    <div class="link">
+        <a href="mainoption.jsp">Back to Options</a>
+        <a href="logout">Logout</a>
     </div>
 </body>
 </html>

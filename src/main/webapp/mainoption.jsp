@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +8,7 @@
     <title>Bank Management System</title>
     <style>
         body {
-            font-family: 'poppins';
+            font-family: 'Poppins', sans-serif;
             margin: 20px;
             background: linear-gradient(to right, #283593, #1976D2);
             color: #fff;
@@ -22,13 +21,13 @@
             text-align: center;
             text-shadow: 2px 2px 4px rgba(33, 150, 243, 0.5);
         }
-        
-      
-        div.link {
+
+        .link {
             display: flex;
-            flex-direction:column;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin-top: 20px;
         }
 
         a {
@@ -42,6 +41,7 @@
             border: 2px solid #020B25;
             border-radius: 10px;
             padding: 10px;
+            margin: 5px 0;
             transition: background-color 0.3s;
             text-decoration: none;
         }
@@ -50,24 +50,25 @@
             background: transparent;
             border: 2px solid #fff;
             color: #fff;
-            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-	<% String name =(String) request.getAttribute("key"); %>
-    <h2>Welcome <%= name%></h2>
+    <% 
+        String name = (String) request.getAttribute("key"); 
+        if (name == null) {
+            name = "User";
+        }
+    %>
+    <h2>Welcome <%= name %></h2>
     <h2>Options</h2>
-   
 
-    <br>
     <div class="link">
-    <a href="withdraw.jsp">Withdraw</a><br>
-    <a href="deposit.jsp">Deposit</a><br>
-    <a href="enquiry">Enquiry</a><br>
-    
-    <a href="logout">logout</a>
+        <a href="withdraw.jsp">Withdraw</a>
+        <a href="deposit.jsp">Deposit</a>
+        <a href="enquiry">Enquiry</a>
+        <a href="logout">Logout</a>
     </div>
 </body>
 </html>

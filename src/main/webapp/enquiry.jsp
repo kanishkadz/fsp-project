@@ -1,16 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <title>Bank Management System</title>
     <style>
         body {
-            font-family: 'poppins';
+            font-family: 'Poppins', sans-serif;
             margin: 20px;
             background: linear-gradient(to right, #283593, #1976D2);
             color: #fff;
@@ -54,6 +51,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
         }
 
         a {
@@ -77,29 +76,23 @@
             color: #fff;
             text-transform: uppercase;
         }
-        
-        
-        
-        
-        
-        
-        
     </style>
-
-
 </head>
 <body>
 
-	<% int name = (Integer)request.getAttribute("myname"); %>
-    <h2>Your Current Balance is <%= name%></h2>
+    <% 
+        Integer balance = (Integer) request.getAttribute("myname"); 
+        if (balance == null) {
+            balance = 0; // Default to 0 if "myname" attribute is not found
+        }
+    %>
     
-    
-    
-    <div>
-    <a href="mainoption.jsp">Back to Options</a>
-    <a href="logout">logout</a>
+    <h2>Your Current Balance is <%= balance %></h2>
+
+    <div class="link">
+        <a href="mainoption.jsp">Back to Options</a>
+        <a href="logout">Logout</a>
     </div>
-    
 
 </body>
 </html>

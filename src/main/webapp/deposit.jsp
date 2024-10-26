@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +33,6 @@
         }
 
         label {
-            text-align: left;
             display: block;
             margin-bottom: 10px;
             letter-spacing: 1px;
@@ -53,15 +51,9 @@
             background-color: transparent;
             color: #fff;
         }
+
         input:focus {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
-            border: 1px solid #64B5F6;
-            border-radius: 5px;
-            background-color: transparent;
-            color: #fff;
+            border-color: #64B5F6;
         }
         
         input[type="submit"] {
@@ -84,13 +76,12 @@
             text-transform: uppercase;
         }
 
-         div.link {
+        .link {
             display: flex;
-            flex-direction:column;
-            align-items: center;
+            gap: 10px;
             justify-content: center;
+            margin-top: 15px;
         }
-        
         
         a {
             background-color: #fff;
@@ -113,34 +104,21 @@
             color: #fff;
             text-transform: uppercase;
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     </style>
 </head>
 <body>
     <h2>Enter Amount</h2>
 
     <form action="deposit" method="post">
-        <label for="eno">Amount to be deposit:</label>
-        <input type="number" name="deposit1"><br>
-
-        
+        <label for="deposit1">Amount to be deposited:</label>
+        <input type="number" name="deposit1" id="deposit1" required><br>
 
         <input type="submit" value="Proceed">
     </form>
 
-    <br>
-    <div>
-    <a href="mainoption.jsp">Back to Options</a>
-    <a href="logout">logout</a>
+    <div class="link">
+        <a href="mainoption.jsp">Back to Options</a>
+        <a href="logout">Logout</a>
     </div>
 </body>
 </html>
