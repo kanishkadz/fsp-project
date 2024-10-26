@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Add shadow to the navbar */
+        .navbar {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 
 <body class="site-background">
@@ -16,7 +22,7 @@
     <div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-#131B23 mb-5 d-none d-lg-block">Asansol Engineering College | Asansol, WB | 713305</div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light py-lg-4" style="background-color: #C7EBF0;">
+    <nav class="navbar navbar-expand-lg navbar-light py-lg-4">
         <div class="container">
             <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Reserve Bank of Asansol</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +53,7 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container mb-5"> <!-- Added mb-5 class for margin-bottom -->
         <div class="bg-faded p-4 my-4">
             <h2 class="text-center text-lg text-uppercase my-0">Our <strong>Products</strong></h2>
             <hr class="divider">
@@ -88,7 +94,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center py-5" style="background-color: #131B23;">
+    <footer class="text-center py-5" style="background-color: #131B23; margin-top: 20px;"> <!-- Added margin-top -->
         <div class="container">
             <a href="#top" class="btn btn-link text-white">Back to Top</a>
             <p class="m-0 text-white">Copyright &copy; Reserve Bank of Asansol 2024</p>
