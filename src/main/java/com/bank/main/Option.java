@@ -26,7 +26,7 @@ public class Option extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter out=resp.getWriter();
 		out.println("login page");
-		int an=Integer.parseInt(req.getParameter("acc"));
+		long an=Long.parseLong(req.getParameter("accno"));
 		int pc=Integer.parseInt(req.getParameter("pincode"));
 		
 		try {
@@ -37,7 +37,7 @@ public class Option extends HttpServlet {
 			int check=0;
 			String displayname=null;
 			while(s.next()) {
-				if(an==s.getInt("acc") && pc==s.getInt("pincode") ) {
+				if(an==s.getLong("acountnumber") && pc==s.getInt("pincode") ) {
 					check=1;
 					displayname=s.getString("name");			
 				}
@@ -54,7 +54,7 @@ public class Option extends HttpServlet {
 				
 				HttpSession session=req.getSession();
 				session.setAttribute("session_key",an);
-				req.setAttribute("key",displayname);
+				session.setAttribute("key",displayname);
 				RequestDispatcher rd=req.getRequestDispatcher("/mainoption.jsp");
 				rd.forward(req, resp);
 			}

@@ -1,80 +1,59 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="ISO-8859-1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-    <title>Bank Management System</title>
+    <title>Bank Management System - Current Balance</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            margin: 20px;
-            background: linear-gradient(to right, #283593, #1976D2);
+            margin: 0;
+            padding: 0;
+            background: #000; /* Changed to black for consistency */
             color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height */
+            backdrop-filter: blur(5px);
         }
 
         h2 {
             color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(33, 150, 243, 0.5);
-        }
-        
-        div.container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-size: 2.5rem; /* Larger font size */
+            text-align: center; /* Center-align the text */
+            margin-bottom: 20px; /* Spacing below the heading */
+            font-weight: bold;
         }
 
-        table {
-            width: 500px;
+        .balance-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
-            border: 2px solid #fff;
-            margin-top: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center; /* Center-align content */
         }
 
-        th, td {
-            border-radius: 10px;
-            padding: 12px;
-            text-align: left;
-            border: 5px solid #fff;
-            color: #fff;
-        }
-
-        th {
-            background-color: #2196F3;
-            text-align: center;
-        }
-        
-        div.link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 15px;
+        .links {
+            text-align: center; /* Center-align links */
+            margin-top: 20px; /* Spacing above the links */
         }
 
         a {
-            background-color: #fff;
-            text-align: center;
-            font-size: 14px;
-            color: #273997;
-            width: 130px;
-            text-transform: uppercase;
-            cursor: pointer;
-            border: 2px solid #020B25;
-            border-radius: 10px;
-            padding: 10px;
-            transition: background-color 0.3s;
             text-decoration: none;
+            font-size: 14px;
+            color: #fff;
+            transition: color 0.3s;
         }
 
         a:hover {
-            background: transparent;
-            border: 2px solid #fff;
-            color: #fff;
-            text-transform: uppercase;
+            color: #64B5F6;
+            text-shadow: 1px 1px 5px #000;
         }
     </style>
 </head>
@@ -87,10 +66,13 @@
         }
     %>
     
-    <h2>Your Current Balance is <%= balance %></h2>
-
-    <div class="link">
+    <div class="balance-container">
+        <h2>Your Current Balance is <%= balance %></h2>
+    </div>
+    
+    <div class="links">
         <a href="mainoption.jsp">Back to Options</a>
+        &nbsp|&nbsp
         <a href="logout">Logout</a>
     </div>
 

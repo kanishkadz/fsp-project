@@ -34,18 +34,18 @@ public class Enquiry extends HttpServlet {
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/bank_system","root","kanishka");
 			
 			 HttpSession session=req.getSession();  
-		    int sk1=(int)session.getAttribute("session_key");
+		    long sk1=(long)session.getAttribute("session_key");
 		    
 		    
 		    
 		    
-			PreparedStatement ps=con.prepareStatement("select amount from bank_record where acc=?");
-			ps.setInt(1, sk1);
+			PreparedStatement ps=con.prepareStatement("select amount from bank_record where acountnumber=?");
+			ps.setLong(1, sk1);
 			ResultSet s=ps.executeQuery();
-			int val=0;
+			long val=0l;
 			
 			if(s.next()) {
-				val=s.getInt("amount");
+				val=s.getLong("amount");
 			}			
 			
 			req.setAttribute("myname",val);

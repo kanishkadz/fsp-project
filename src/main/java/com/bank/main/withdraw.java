@@ -30,7 +30,7 @@ public class withdraw extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter out=resp.getWriter();
 		out.println("Withdraw Page");
-		int d=Integer.parseInt(req.getParameter("withdraw1"));
+		long d=Long.parseLong(req.getParameter("withdraw1"));
 		
 		
 		try {
@@ -38,16 +38,16 @@ public class withdraw extends HttpServlet {
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/bank_system","root","kanishka");
 			
 			HttpSession session=req.getSession();  
-		    int sk1=(int)session.getAttribute("session_key");
+		    Long sk1=(Long)session.getAttribute("session_key");
 			
 			
-			PreparedStatement ps=con.prepareStatement("select amount from bank_record where acc=?");
-			ps.setInt(1, sk1);
+			PreparedStatement ps=con.prepareStatement("select amount from bank_record where acountnumber=?");
+			ps.setLong(1, sk1);
 			ResultSet s=ps.executeQuery();
 			
-			int val=0;
+			Long val=0l;
 			if(s.next()) {
-				val=s.getInt("amount");}
+				val=s.getLong("amount");}
 			
 			
 			if(d>val) {
@@ -60,13 +60,13 @@ public class withdraw extends HttpServlet {
 			
 			
 			else {
-			int sum=val-d;
+			Long sum=val-d;
 			
 			//   update
 			
 			
 			 Statement statement = con.createStatement();
-			 int count = statement.executeUpdate("UPDATE bank_record SET amount =" + sum + " WHERE acc=" + sk1);
+			 int count = statement.executeUpdate("UPDATE bank_record SET amount =" + sum + " WHERE acountnumber=" + sk1);
 			
 			
 			resp.setContentType("text/html");

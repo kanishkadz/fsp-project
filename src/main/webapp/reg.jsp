@@ -11,30 +11,34 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #000; /* Solid black background */
+            background: #000;
             color: #fff;
-            display: flex; /* Flexbox for centering */
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-            height: 100vh; /* Full viewport height */
-            backdrop-filter: blur(5px); /* Slight glass effect */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            backdrop-filter: blur(5px);
         }
 
         h2 {
             color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(33, 150, 243, 0.7);
-            margin-bottom: 20px; /* Space below the heading */
+            font-size: 2.5rem; /* Larger font size */
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #000;
         }
 
         form {
-            max-width: 400px; /* Increased max width for better appearance */
+            max-width: 400px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: rgba(57, 62, 70, 0.8); /* Semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.5); /* Darker semi-transparent background */
             border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
-            backdrop-filter: blur(10px); /* Glass effect */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center; /* Center-align form content */
         }
 
         label {
@@ -49,64 +53,61 @@
 
         input {
             width: 100%;
-            padding: 12px; /* Increased padding for better usability */
+            padding: 12px;
             margin-bottom: 15px;
             box-sizing: border-box;
-            border: 2px solid #64B5F6;
+            border: 2px solid #64B5F6; /* Light blue border */
             border-radius: 5px;
-            background-color: transparent; /* Keep background transparent for glass effect */
+            background-color: transparent; /* Transparent input fields */
             color: #fff;
-            transition: border-color 0.3s; /* Smooth border color transition */
+            transition: border-color 0.3s;
         }
 
         input:focus {
             outline: none;
-            border-color: #2196F3; /* Change border color on focus */
+            border-color: #2196F3; /* Border color on focus */
         }
 
         input[type="submit"] {
             background-color: #fff;
-            font-size: 16px; /* Increased font size for better readability */
+            font-size: 16px;
             color: #273997;
-            width: 100%; /* Full width */
+            width: 100%;
             text-transform: uppercase;
             cursor: pointer;
             border: none;
             border-radius: 10px;
-            padding: 12px; /* Increased padding for button */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+            padding: 12px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         input[type="submit"]:hover {
-            background: rgba(255, 255, 255, 0.8); /* Light hover effect */
-            border: 2px solid #fff; /* White border on hover */
-            color: #273997;
+            background-color: #1a237e; /* Dark blue color on hover */
+            color: #fff;
         }
 
-        ::placeholder {
-            color: #fff; /* Placeholder color */
-            font-weight: bold;
+        .home-button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
         }
 
         .home-button {
-            display: block; /* Centering the button */
-            width: 100%; /* Full width */
-            margin-top: 20px; /* Space above the button */
-            padding: 12px; /* Button padding */
-            background-color: #64B5F6; /* Button color */
-            color: #000; /* Text color */
-            text-align: center; /* Center text */
-            text-decoration: none; /* No underline */
-            font-size: 16px; /* Font size */
-            font-weight: bold; /* Font weight */
-            border-radius: 10px; /* Rounded corners */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+            padding: 8px;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .home-button:hover {
-            background-color: #fff; /* Lighten background on hover */
-            color: #000; /* Darken text color on hover */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+            background-color: #808080; /* Gray color on hover */
+            color: #fff;
         }
     </style>
 </head>
@@ -115,8 +116,8 @@
         <h2>Registration Form</h2>
 
         <form action="NewReg" method="post">
-            <label for="eno">Account Number:</label>
-            <input type="number" name="acc" id="eno" placeholder="Enter 10-digit account number" minlength="10" maxlength="10" required>
+            <label for="eno">Mobile Number:</label>
+            <input type="number" name="acc" id="eno" placeholder="Enter 10-digit mobile number" minlength="10" maxlength="10" required>
 
             <label for="ename">Holder Name:</label>
             <input type="text" name="name" id="ename" placeholder="Enter account holder's name" required>
@@ -130,7 +131,9 @@
             <input type="submit" value="Register">
         </form>
 
-        <a href="index.html" class="home-button">Home</a> <!-- Home button -->
+        <div class="home-button-container">
+            <a href="index.html" class="home-button">Home</a> <!-- Home button -->
+        </div>
     </div>
 </body>
 </html>

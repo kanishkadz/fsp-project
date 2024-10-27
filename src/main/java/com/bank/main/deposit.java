@@ -28,7 +28,7 @@ public class deposit extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter out=resp.getWriter();
 		out.println("deposit page");
-		int d=Integer.parseInt(req.getParameter("deposit1"));
+		long d=Integer.parseInt(req.getParameter("deposit1"));
 		
 		
 		try {
@@ -36,23 +36,23 @@ public class deposit extends HttpServlet {
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/bank_system","root","kanishka");
 			
 			HttpSession session=req.getSession();  
-		    int sk1=(int)session.getAttribute("session_key");
+			long sk1=(long)session.getAttribute("session_key");
 			
 			
-			PreparedStatement ps=con.prepareStatement("select amount from bank_record where acc=?");
-			ps.setInt(1, sk1);
+			PreparedStatement ps=con.prepareStatement("select amount from bank_record where acountnumber=?");
+			ps.setLong(1, sk1);
 			ResultSet s=ps.executeQuery();
 			
-			int val=0;
+			long val=0;
 			if(s.next()) {
-				val=s.getInt("amount");}
-			int sum=d+val;
+				val=s.getLong("amount");}
+			long sum=d+val;
 			
 			//   update
 			
 			
 			 Statement statement = con.createStatement();
-			 int count = statement.executeUpdate("UPDATE bank_record SET amount =" + sum + " WHERE acc=" + sk1);
+			 int count = statement.executeUpdate("UPDATE bank_record SET amount =" + sum + " WHERE acountnumber=" + sk1);
 			
 			
 			resp.setContentType("text/html");
