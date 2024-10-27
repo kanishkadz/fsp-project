@@ -86,12 +86,6 @@
             color: #fff;
         }
 
-        .home-button-container {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-top: 20px;
-        }
 
         .home-button {
             padding: 8px;
@@ -101,7 +95,7 @@
             text-decoration: none;
             font-size: 14px;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: full;
             transition: background-color 0.3s, color 0.3s;
         }
 
@@ -131,9 +125,6 @@
             <input type="submit" value="Register">
         </form>
 
-        <div class="home-button-container">
-            <a href="index.html" class="home-button">Home</a> <!-- Home button -->
-        </div>
     </div>
 </body>
 </html>
