@@ -11,7 +11,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #000;
+            background: #042a3f;
             color: #fff;
             display: flex;
             justify-content: center;
@@ -37,7 +37,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid grey;
             text-align: center; /* Center-align form content */
         }
 
@@ -46,7 +46,7 @@
             display: block;
             margin-bottom: 10px;
             letter-spacing: 1px;
-            font-weight: bold;
+            font-weight: normal;
             color: #fff;
             text-shadow: 1px 1px 2px #000;
         }
@@ -56,7 +56,7 @@
             padding: 12px;
             margin-bottom: 15px;
             box-sizing: border-box;
-            border: 2px solid #64B5F6; /* Light blue border */
+            border: 2px solid grey; /* Light blue border */
             border-radius: 5px;
             background-color: transparent; /* Transparent input fields */
             color: #fff;
@@ -69,9 +69,9 @@
         }
 
         input[type="submit"] {
-            background-color: #fff;
+            background-color:#079760;
             font-size: 16px;
-            color: #273997;
+            color: #ffffff;
             width: 100%;
             text-transform: uppercase;
             cursor: pointer;
@@ -82,7 +82,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #1a237e; /* Dark blue color on hover */
+            background-color: #045838; /* Dark blue color on hover */
             color: #fff;
         }
 
@@ -117,16 +117,16 @@
 
         <form action="NewReg" method="post">
             <label for="eno">Mobile Number:</label>
-            <input type="number" name="acc" id="eno" placeholder="Enter 10-digit mobile number" minlength="10" maxlength="10" required>
+            <input type="text" name="acc" id="eno" placeholder="Enter 10-digit mobile number" minlength="10" maxlength="10" required>
 
             <label for="ename">Holder Name:</label>
             <input type="text" name="name" id="ename" placeholder="Enter account holder's name" required>
 
             <label for="esal">Pin Code:</label>
-            <input type="number" name="pincode" id="esal" placeholder="Enter unique 4-digit code" minlength="4" maxlength="4" required>
+            <input type="text" name="pincode" id="esal" placeholder="Enter unique 4-digit code" minlength="4" maxlength="4" required>
 
             <label for="balance">Opening Balance:</label>
-            <input type="number" name="opblc" id="opblc" placeholder="Default: zero" value="0">
+            <input type="text" name="opblc" id="opblc" placeholder="Default: zero" value="0">
 
             <input type="submit" value="Register">
         </form>

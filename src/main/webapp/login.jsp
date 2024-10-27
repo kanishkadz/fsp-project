@@ -38,7 +38,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid grey;
             text-align: center; /* Center-align form content */
         }
 
@@ -47,7 +47,7 @@
             display: block;
             margin-bottom: 10px;
             letter-spacing: 1px;
-            font-weight: bold;
+            font-weight: normal;
             color: #fff;
             text-shadow: 1px 1px 2px #000;
         }
@@ -57,7 +57,7 @@
             padding: 12px;
             margin-bottom: 15px;
             box-sizing: border-box;
-            border: 2px solid #fff; /* Changed to white border */
+            border: 1px solid grey; /* Changed to white border */
             border-radius: 5px;
             background-color: transparent;
             color: #fff;
@@ -113,7 +113,7 @@
 
         <form action="Option" method="post">
             <label for="eno">Account No:</label>
-            <input type="number" name="acc" id="eno" required>
+            <input type="text" name="acc" id="eno" required>
 
             <label for="esal">Pin Code:</label>
             <input type="password" name="pincode" id="esal" required>
