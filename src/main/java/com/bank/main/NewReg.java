@@ -76,7 +76,7 @@ public class NewReg extends HttpServlet {
             ps.setLong(1, an);
             ps.setInt(2, pc);
             ps.setString(3, name);
-            ps.setInt(4, opening_balance);
+            ps.setLong(4, opening_balance);
             ps.setLong(5, account1);
 
             // Execute the query and check for success
