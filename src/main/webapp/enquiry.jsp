@@ -64,7 +64,7 @@
     <% 
         Integer balance = (Integer) request.getAttribute("myname"); 
         if (balance == null) {
-            balance = 0; // Default to 0 if "myname" attribute is not found
+            balance = 0;
         }
     %>
     
