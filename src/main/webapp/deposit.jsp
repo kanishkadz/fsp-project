@@ -22,9 +22,9 @@
 
         h2 {
             color: #fff;
-            font-size: 2.5rem; /* Larger font size */
-            text-align: center; /* Center-align the text */
-            margin-bottom: 20px; /* Spacing below the heading */
+            font-size: 2.5rem;
+            text-align: center; 
+            margin-bottom: 20px;
             font-weight: bold;
         }
 
@@ -37,7 +37,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center; /* Center-align form content */
+            text-align: center;
         }
 
         label {
@@ -45,7 +45,7 @@
             display: block;
             margin-bottom: 10px;
             letter-spacing: 1px;
-            color: #fff; /* Removed font-weight: bold; */
+            color: #fff;
             text-shadow: 1px 1px 2px #000;
         }
 
@@ -54,7 +54,7 @@
             padding: 12px;
             margin-bottom: 15px;
             box-sizing: border-box;
-            border: 2px solid #fff; /* Changed to white border */
+            border: 2px solid #fff;
             border-radius: 5px;
             background-color: transparent;
             color: #fff;
@@ -63,7 +63,7 @@
 
         input:focus {
             outline: none;
-            border-color: #64B5F6; /* Keep focus color */
+            border-color: #64B5F6;
         }
 
         input[type="submit"] {
@@ -79,10 +79,8 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-
-        /* Hover effect with dark blue color */
         input[type="submit"]:hover {
-            background-color: #045838; /* Dark blue color */
+            background-color: #045838;
             color: #fff;
         }
 
@@ -97,7 +95,7 @@
             font-size: 14px;
             color: #fff;
             transition: color 0.3s;
-            margin: 10px 0; /* Increased margin for spacing */
+            margin: 10px 0;
         }
 
         a:hover {
