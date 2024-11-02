@@ -31,15 +31,15 @@
 
         h2 {
             color: #fff;
-            font-size: 2rem; /* Adjusted font size */
+            font-size: 2rem;
             text-align: center;
-            margin: 10px 0; /* Reduced top and bottom margin */
+            margin: 10px 0; 
             font-weight: bold;
         }
 
         .options-container {
             width: 500px;
-            padding: 20px 30px 30px 30px; /* Reduced top padding */
+            padding: 20px 30px 30px 30px;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -52,7 +52,7 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-top: 10px; /* Reduced gap between options and links */
+            margin-top: 10px;
         }
 
         a {
