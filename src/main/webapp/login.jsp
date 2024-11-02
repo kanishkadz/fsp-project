@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<!-- REMOVE CREATE A NEW ACCOUNT & FORGOT PASSWORD -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +22,9 @@
 
         h2 {
             color: #fff;
-            font-size: 2.5rem; /* Larger font size */
-            text-align: center; /* Center-align the text */
-            margin-bottom: 20px; /* Spacing below the heading */
+            font-size: 2.5rem; 
+            text-align: center;
+            margin-bottom: 20px; 
             font-weight: bold;
         }
 
@@ -39,7 +37,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(15px);
             border: 1px solid grey;
-            text-align: center; /* Center-align form content */
+            text-align: center;
         }
 
         label {
@@ -57,7 +55,7 @@
             padding: 12px;
             margin-bottom: 15px;
             box-sizing: border-box;
-            border: 1px solid grey; /* Changed to white border */
+            border: 1px solid grey;
             border-radius: 5px;
             background-color: transparent;
             color: #fff;
@@ -66,7 +64,7 @@
 
         input:focus {
             outline: none;
-            border-color: #fff; /* Keep the focus border white */
+            border-color: #fff;
         }
 
         input[type="submit"] {
@@ -82,9 +80,8 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Hover effect with dark blue color */
         input[type="submit"]:hover {
-            background-color: #045838; /* Dark blue color */
+            background-color: #045838; 
             color: #fff;
         }
 
