@@ -11,7 +11,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #000;
+            background: #042a3f;
             color: #fff;
             display: flex;
             justify-content: center;
@@ -67,9 +67,9 @@
         }
 
         input[type="submit"] {
-            background-color: #fff;
+            background-color: #079760;
             font-size: 16px;
-            color: #273997;
+            color: #ffffff;
             width: 100%;
             text-transform: uppercase;
             cursor: pointer;
@@ -79,9 +79,10 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
+
         /* Hover effect with dark blue color */
         input[type="submit"]:hover {
-            background-color: #1a237e; /* Dark blue color */
+            background-color: #045838; /* Dark blue color */
             color: #fff;
         }
 

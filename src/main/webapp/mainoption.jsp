@@ -1,73 +1,95 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-    <title>Bank Management System</title>
+    <title>Bank Management System - Options</title>
     <style>
         body {
-            font-family: 'poppins';
-            margin: 20px;
-            background: linear-gradient(to right, #283593, #1976D2);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #042a3f;
             color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            backdrop-filter: blur(5px);
+        }
+
+        .welcome-message {
+            color: #fff;
+            font-size: 3rem; /* Larger font size for Welcome message */
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px; /* Extra spacing below the welcome message */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
 
         h2 {
             color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 2.5rem;
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(33, 150, 243, 0.5);
+            margin-bottom: 20px;
+            font-weight: bold;
         }
-        
-      
-        div.link {
+
+        .options-container {
+            width: 500px; /* Wider options box */
+            padding: 30px; /* Additional padding */
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            border: 1px solid grey;
+            text-align: center;
+        }
+
+        .link {
             display: flex;
-            flex-direction:column;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         a {
-            background-color: #fff;
-            text-align: center;
-            font-size: 14px;
-            color: #273997;
-            width: 130px;
-            text-transform: uppercase;
-            cursor: pointer;
-            border: 2px solid #020B25;
+            background-color: #079760;
+            color: #ffffff;
+            padding: 12px;
+            border: none;
             border-radius: 10px;
-            padding: 10px;
-            transition: background-color 0.3s;
+            font-size: 16px;
+            text-transform: uppercase;
             text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         a:hover {
-            background: transparent;
-            border: 2px solid #fff;
+            background-color: #045838;
             color: #fff;
-            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-	<% String name =(String) session.getAttribute("key"); %>
-    <h2>Welcome <%= name%></h2>
-    <h2>Options</h2>
-   
-
-    <br>
-    <div class="link">
-    <a href="withdraw.jsp">Withdraw</a><br>
-    <a href="deposit.jsp">Deposit</a><br>
-    <a href="enquiry">Enquiry</a><br>
-    
-    <a href="logout">logout</a>
+    <% String name = (String) session.getAttribute("key"); %>
+    <div class="welcome-message">
+        Welcome, <%= name %>
     </div>
+
+    <div class="options-container">
+        <h2>Options</h2>
+        <div class="link">
+            <a href="withdraw.jsp">Withdraw</a>
+            <a href="deposit.jsp">Deposit</a>
+            <a href="enquiry.jsp">Enquiry</a>
+            <a href="logout">Logout</a>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <title>Bank Management System - Current Balance</title>
     <style>
@@ -10,20 +10,20 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #000; /* Changed to black for consistency */
+            background: #042a3f;
             color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full height */
+            height: 100vh;
             backdrop-filter: blur(5px);
         }
 
         h2 {
             color: #fff;
-            font-size: 2.5rem; /* Larger font size */
-            text-align: center; /* Center-align the text */
-            margin-bottom: 20px; /* Spacing below the heading */
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
             font-weight: bold;
         }
 
@@ -36,19 +36,21 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center; /* Center-align content */
+            text-align: center;
         }
 
         .links {
-            text-align: center; /* Center-align links */
-            margin-top: 20px; /* Spacing above the links */
+            text-align: center;
+            margin-top: 20px;
         }
 
         a {
+            display: inline-block;
             text-decoration: none;
             font-size: 14px;
             color: #fff;
             transition: color 0.3s;
+            margin: 10px 0;
         }
 
         a:hover {

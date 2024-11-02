@@ -11,20 +11,20 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #000; /* Consistent background color */
+            background: #042a3f;
             color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full height */
+            height: 100vh;
             backdrop-filter: blur(5px);
         }
 
         h2 {
             color: #fff;
-            font-size: 2.5rem; /* Larger font size */
-            text-align: center; /* Center-align the text */
-            margin-bottom: 20px; /* Spacing below the heading */
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
             font-weight: bold;
         }
 
@@ -37,7 +37,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center; /* Center-align form content */
+            text-align: center;
         }
 
         label {
@@ -45,7 +45,6 @@
             display: block;
             margin-bottom: 10px;
             letter-spacing: 1px;
-            font-weight: bold;
             color: #fff;
             text-shadow: 1px 1px 2px #000;
         }
@@ -55,7 +54,7 @@
             padding: 12px;
             margin-bottom: 15px;
             box-sizing: border-box;
-            border: 2px solid #64B5F6;
+            border: 2px solid #fff;
             border-radius: 5px;
             background-color: transparent;
             color: #fff;
@@ -64,13 +63,13 @@
 
         input:focus {
             outline: none;
-            border-color: #2196F3;
+            border-color: #64B5F6;
         }
 
         input[type="submit"] {
-            background-color: #fff;
+            background-color: #079760;
             font-size: 16px;
-            color: #273997;
+            color: #ffffff;
             width: 100%;
             text-transform: uppercase;
             cursor: pointer;
@@ -80,41 +79,35 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Hover effect with dark blue color */
         input[type="submit"]:hover {
-            background-color: #1a237e; /* Dark blue color */
+            background-color: #045838; /* Dark blue color */
             color: #fff;
         }
 
-        .link {
-            text-align: center; /* Center-align links */
+
+        .links {
+            text-align: center;
             margin-top: 20px;
         }
 
-        /* Updated styles for the links to look like buttons */
         a {
             display: inline-block;
             text-decoration: none;
-            font-size: 16px;
-            color: #fff; /* White text color */
-            background-color: #64B5F6; /* Background color for buttons */
-            border: none;
-            border-radius: 10px;
-            padding: 12px 20px; /* Increased padding for button effect */
-            margin: 5px; /* Spacing between buttons */
-            transition: background-color 0.3s, color 0.3s;
+            font-size: 14px;
+            color: #fff;
+            transition: color 0.3s;
+            margin: 10px 0;
         }
 
         a:hover {
-            background-color: #1a237e; /* Darker blue on hover */
-            color: #fff;
-            text-shadow: 1px 1px 5px #000; /* Shadow effect */
+            color: #64B5F6;
+            text-shadow: 1px 1px 5px #000;
         }
     </style>
 </head>
 <body>
     <div>
-        <h2>Enter Amount</h2>
+        <h2>Withdraw Amount</h2>
 
         <form action="withdraw" method="post">
             <label for="withdrawAmount">Amount to be Withdrawn:</label>
@@ -123,8 +116,9 @@
             <input type="submit" value="Proceed">
         </form>
 
-        <div class="link">
+        <div class="links">
             <a href="mainoption.jsp">Back to Options</a>
+            &nbsp|&nbsp
             <a href="logout">Logout</a>
         </div>
     </div>
