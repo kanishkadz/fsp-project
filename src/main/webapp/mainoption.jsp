@@ -22,24 +22,24 @@
 
         .welcome-message {
             color: #fff;
-            font-size: 3rem; /* Larger font size for Welcome message */
+            font-size: 3rem;
             font-weight: bold;
             text-align: center;
-            margin-bottom: 30px; /* Extra spacing below the welcome message */
+            margin-bottom: 30px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
 
         h2 {
             color: #fff;
-            font-size: 2.5rem;
+            font-size: 2rem; /* Adjusted font size */
             text-align: center;
-            margin-bottom: 20px;
+            margin: 10px 0; /* Reduced top and bottom margin */
             font-weight: bold;
         }
 
         .options-container {
-            width: 500px; /* Wider options box */
-            padding: 30px; /* Additional padding */
+            width: 500px;
+            padding: 20px 30px 30px 30px; /* Reduced top padding */
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -52,7 +52,7 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 10px; /* Reduced gap between options and links */
         }
 
         a {
@@ -83,6 +83,7 @@
 
     <div class="options-container">
         <h2>Options</h2>
+        <br>
         <div class="link">
             <a href="withdraw.jsp">Withdraw</a>
             <a href="deposit.jsp">Deposit</a>
