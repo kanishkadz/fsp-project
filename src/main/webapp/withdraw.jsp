@@ -80,7 +80,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #045838; /* Dark blue color */
+            background-color: #045838;
             color: #fff;
         }
 
