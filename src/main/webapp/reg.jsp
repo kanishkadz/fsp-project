@@ -22,7 +22,7 @@
 
         h2 {
             color: #fff;
-            font-size: 2.5rem; /* Larger font size */
+            font-size: 2.5rem;
             text-align: center;
             margin-bottom: 20px;
             font-weight: bold;
@@ -33,12 +33,12 @@
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Darker semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(15px);
             border: 1px solid grey;
-            text-align: center; /* Center-align form content */
+            text-align: center;
         }
 
         label {
@@ -56,16 +56,16 @@
             padding: 12px;
             margin-bottom: 15px;
             box-sizing: border-box;
-            border: 2px solid grey; /* Light blue border */
+            border: 2px solid grey;
             border-radius: 5px;
-            background-color: transparent; /* Transparent input fields */
+            background-color: transparent; 
             color: #fff;
             transition: border-color 0.3s;
         }
 
         input:focus {
             outline: none;
-            border-color: #2196F3; /* Border color on focus */
+            border-color: #2196F3;
         }
 
         input[type="submit"] {
@@ -82,7 +82,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #045838; /* Dark blue color on hover */
+            background-color: #045838;
             color: #fff;
         }
 
@@ -100,7 +100,7 @@
         }
 
         .home-button:hover {
-            background-color: #808080; /* Gray color on hover */
+            background-color: #808080;
             color: #fff;
         }
     </style>
