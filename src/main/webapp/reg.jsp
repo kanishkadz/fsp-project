@@ -69,7 +69,7 @@
         }
 
         input[type="submit"] {
-            background-color:#079760;
+            background-color: #079760;
             font-size: 16px;
             color: #ffffff;
             width: 100%;
@@ -86,16 +86,16 @@
             color: #fff;
         }
 
-
         .home-button {
-            padding: 8px;
+            display: inline-block;
+            padding: 8px 16px;
             background-color: #fff;
             color: #000;
             text-align: center;
             text-decoration: none;
             font-size: 14px;
             font-weight: bold;
-            border-radius: full;
+            border-radius: 50px;
             transition: background-color 0.3s, color 0.3s;
         }
 
@@ -111,20 +111,19 @@
 
         <form action="NewReg" method="post">
             <label for="eno">Mobile Number:</label>
-            <input type="text" name="acc" id="eno" placeholder="Enter 10-digit mobile number" minlength="10" maxlength="10" required>
+            <input type="tel" name="acc" id="eno" placeholder="Enter 10-digit mobile number" pattern="\d{10}" maxlength="10" required>
 
             <label for="ename">Holder Name:</label>
             <input type="text" name="name" id="ename" placeholder="Enter account holder's name" required>
 
             <label for="esal">Pin Code:</label>
-            <input type="text" name="pincode" id="esal" placeholder="Enter unique 4-digit code" minlength="4" maxlength="4" required>
+            <input type="number" name="pincode" id="esal" placeholder="Enter unique 4-digit code" min="1000" max="9999" required>
 
             <label for="balance">Opening Balance:</label>
-            <input type="text" name="opblc" id="opblc" placeholder="Default: zero" value="0">
+            <input type="number" name="opblc" id="opblc" placeholder="Default: zero" value="0" min="0" required>
 
             <input type="submit" value="Register">
         </form>
-
     </div>
 </body>
 </html>

@@ -17,6 +17,7 @@
             align-items: center;
             height: 100vh;
             backdrop-filter: blur(5px);
+            flex-direction: column; /* Added this line */
         }
 
         h2 {
@@ -40,8 +41,8 @@
         }
 
         .links {
-            text-align: center;
             margin-top: 20px;
+            text-align: center;
         }
 
         a {
@@ -50,7 +51,7 @@
             font-size: 14px;
             color: #fff;
             transition: color 0.3s;
-            margin: 10px 0;
+            margin: 0 10px;
         }
 
         a:hover {
@@ -70,12 +71,10 @@
     
     <div class="balance-container">
         <h2>Your Current Balance is <%= balance %></h2>
-    </div>
-    
-    <div class="links">
-        <a href="mainoption.jsp">Back to Options</a>
-        &nbsp|&nbsp
-        <a href="logout">Logout</a>
+        <div class="links">
+            <a href="mainoption.jsp">Back to Options</a> |
+            <a href="logout">Logout</a>
+        </div>
     </div>
 
 </body>

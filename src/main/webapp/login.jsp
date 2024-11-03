@@ -119,8 +119,7 @@
         </form>
         
         <div class="links">
-            <a href="registration.jsp">Create an account</a> | 
-            <a href="forgot-password.jsp">Forgot Password?</a>
+            <a href="reg.jsp">Create an account</a>
         </div>
     </div>
 </body>

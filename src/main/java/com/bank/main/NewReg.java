@@ -7,7 +7,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Random;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,8 +19,9 @@ public class NewReg extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
+        resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
-        
+
         // Generate a random 10-digit account number
         Random random = new Random();
         StringBuilder sb = new StringBuilder();
@@ -29,38 +29,29 @@ public class NewReg extends HttpServlet {
         for (int i = 0; i < 9; i++) {
             sb.append(random.nextInt(10));
         }
-        long account1 = Long.parseLong(sb.toString());
-        System.out.println("Generated Account Number: " + account1);
+        long generatedAccountNumber = Long.parseLong(sb.toString());
+        System.out.println("Generated Account Number: " + generatedAccountNumber);
         
-        // Fetching input parameters and initializing variables
-        String accParam = req.getParameter("acc");
+        // Fetching input parameters
         String name = req.getParameter("name");
         String pincodeParam = req.getParameter("pincode");
         String openingBalanceParam = req.getParameter("opblc");
 
         // Validate and parse inputs
-        long an;
-        int pc;
-        long opening_balance;
+        int pincode;
+        long openingBalance;
 
         try {
-            // Parse account number and check if it's exactly 10 digits
-            if (accParam == null || accParam.length() != 10) {
-                throw new NumberFormatException("Account number must be 10 digits.");
-            }
-            an = Long.parseLong(accParam);
-
-            // Parse pincode and check if it's exactly 4 digits
+            // Validate pincode length (4 digits)
             if (pincodeParam == null || pincodeParam.length() != 4) {
                 throw new NumberFormatException("Pincode must be 4 digits.");
             }
-            pc = Integer.parseInt(pincodeParam);
+            pincode = Integer.parseInt(pincodeParam);
 
-            // Parse opening balance
-            opening_balance = Long.parseLong(openingBalanceParam);
+            // Validate opening balance input
+            openingBalance = Long.parseLong(openingBalanceParam);
 
         } catch (NumberFormatException e) {
-            resp.setContentType("text/html");
             out.println("<h3>Invalid input: " + e.getMessage() + "</h3>");
             RequestDispatcher rd = req.getRequestDispatcher("/reg.jsp");
             rd.include(req, resp);
@@ -68,16 +59,17 @@ public class NewReg extends HttpServlet {
         }
 
         // Database connection and record insertion
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank_system", "root", "kanishka");
-            PreparedStatement ps = con.prepareStatement("INSERT INTO bank_record (account_number, pincode, name, opening_balance, generated_account) VALUES (?, ?, ?, ?, ?)");
+        try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank_system", "root", "kanishka");
+             PreparedStatement ps = con.prepareStatement(
+                     "INSERT INTO bank_record (account_number, pincode, name, opening_balance) VALUES (?, ?, ?, ?)")) {
             
-            ps.setLong(1, an);
-            ps.setInt(2, pc);
+            // Register JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            ps.setLong(1, generatedAccountNumber);
+            ps.setInt(2, pincode);
             ps.setString(3, name);
-            ps.setLong(4, opening_balance);
-            ps.setLong(5, account1);
+            ps.setLong(4, openingBalance);
 
             // Execute the query and check for success
             int check = ps.executeUpdate();
@@ -87,16 +79,15 @@ public class NewReg extends HttpServlet {
                 rd.forward(req, resp);
             } else {
                 out.println("<h1>Registration Failed</h1>");
-                RequestDispatcher rd = req.getRequestDispatcher("/NewReg");
+                RequestDispatcher rd = req.getRequestDispatcher("/reg.jsp");
                 rd.include(req, resp);
             }
         } catch (SQLException e) {
-            resp.setContentType("text/html");
-            out.println("<h3>Account Number or pincode already exists</h3>");
+            // Check for specific SQL error codes for better error handling
+            out.println("<h3>Error: Account Number or Pincode already exists</h3>");
             RequestDispatcher rd = req.getRequestDispatcher("/reg.jsp");
             rd.include(req, resp);
         } catch (Exception e) {
-            resp.setContentType("text/html");
             out.println("<h3>Error: " + e.getMessage() + "</h3>");
             RequestDispatcher rd = req.getRequestDispatcher("/reg.jsp");
             rd.include(req, resp);
